@@ -1,0 +1,15 @@
+{
+  "name": "projeto-jv-devops",
+  "version": "1.0.0",
+  "description": "Repositório para a matéria de DevOps PucPr",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
