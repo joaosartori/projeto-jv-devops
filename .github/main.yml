@@ -29,4 +29,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Simulação de Deploy
-      run: echo "Deploy concluído com sucesso no ambiente de produção!"
+      run: echo "Deploy concluído com sucesso no ambiente de produção!!"
