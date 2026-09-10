@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-app.get('/', (req, res) => {
-  res.json({ mensagem: 'Bem-vindo à API do projeto de CI/CD!' });
+app.get('/status', (req, res) => {
+  res.json({ status: 'API online e funcionando!' });
 });
 
 app.listen(PORT, () => {
