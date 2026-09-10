@@ -1,4 +1,4 @@
-name: CI - Continuous Integration
+name: CI/CD Pipeline
 
 on:
   push:
@@ -7,14 +7,13 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Baixar código do repositório
       uses: actions/checkout@v4
 
-    - name: Configurar ambiente Node.js
+    - name: Configurar Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '20'
@@ -24,3 +23,10 @@ jobs:
 
     - name: Executar testes automatizados
       run: npm test
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Simulação de Deploy
+      run: echo "Deploy concluído com sucesso no ambiente de produção!"
