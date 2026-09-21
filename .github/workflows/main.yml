@@ -26,3 +26,9 @@ jobs:
     steps:
     - name: Simulação de Deploy
       run: echo "Deploy concluído com sucesso no ambiente de produção!"
+      
+    - name: Enviar alerta para o Discord
+      run: |
+        curl -H "Content-Type: application/json" \
+        -d '{"content": "🚀 **Alerta DevOps:** Um novo commit ou merge foi realizado na branch `main`! A pipeline de CI/CD foi finalizada com sucesso."}' \
+        ${{ secrets.DISCORD_WEBHOOK }}

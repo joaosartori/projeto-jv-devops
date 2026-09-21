@@ -4,8 +4,8 @@
   "description": "Repositório para a matéria de DevOps PucPr",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
-  },
+  "start": "node index.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
