@@ -1,10 +1,15 @@
 const assert = require('assert');
 
-// Simulação de um teste básico
+// Função simples da nossa aplicação que queremos testar
+function soma(a, b) {
+  return a + b;
+}
+
+// Execução do Teste Unitário
 try {
-  assert.strictEqual(1 + 1, 2);
-  console.log('Todos os testes passaram com sucesso!');
+  assert.strictEqual(soma(2, 3), 5);
+  console.log('✅ Teste unitário aprovado com sucesso: 2 + 3 = 5');
 } catch (error) {
-  console.error('Falha nos testes:', error);
-  process.exit(1);
+  console.error('❌ Falha no teste unitário');
+  process.exit(1); // Força a action a falhar se o teste der erro
 }
